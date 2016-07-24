@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         double result = 0.0;
 
-        //if文の中で,変数を宣言してしまえばいいのだ！
+        //if文の中で変数を宣言してしまえばいいのだ！
         //System.out.printInなんて忘れろ！
 
 
