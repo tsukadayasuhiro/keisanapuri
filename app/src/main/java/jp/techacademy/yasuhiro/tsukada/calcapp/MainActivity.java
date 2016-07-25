@@ -4,6 +4,7 @@ package jp.techacademy.yasuhiro.tsukada.calcapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,6 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EditText editText1 = (EditText) findViewById(R.id.editText1);
         EditText editText2 = (EditText) findViewById(R.id.editText2);
 
+        editText1.setInputType
+                ( InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+        editText2.setInputType
+                (InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
 
         String string1 = editText1.getText().toString();
         double stringToValue1 = Double.parseDouble(string1);
