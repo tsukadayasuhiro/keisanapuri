@@ -39,11 +39,15 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:id="@+id/editText1"/>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
         android:layout_below="@+id/editText1"
+        android:inputType="numberDecimal"
         android:layout_alignParentStart="true" />
+
 </RelativeLayout>

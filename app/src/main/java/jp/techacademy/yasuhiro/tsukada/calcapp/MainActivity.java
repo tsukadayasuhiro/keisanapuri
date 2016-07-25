@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.math.BigDecimal;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
@@ -42,25 +44,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 (InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
 
         String string1 = editText1.getText().toString();
-        double stringToValue1 = Double.parseDouble(string1);
+        System.out.println(string1);
+        if (string1.equals("")) {
+        return;
+        }
+            double stringToValue1 = Double.parseDouble(string1);
         String string2 = editText2.getText().toString();
+        System.out.println(string2);
+        if (string2.equals("")) {
+            return;
+        }
         double stringToValue2 = Double.parseDouble(string2);
 
         double result = 0.0;
+
+        BigDecimal a = new BigDecimal(string1);
+        BigDecimal b = new BigDecimal(string2);
+
 
         //if文の中で変数を宣言してしまえばいいのだ！
         //System.out.printInなんて忘れろ！
 
 
         if (v.getId() == R.id.button1) {
-            result = stringToValue1 + stringToValue2;
+//            result = stringToValue1 + stringToValue2;
+            result = a.add(b).doubleValue();
         } else if (v.getId() == R.id.button2) {
-            result = stringToValue1 - stringToValue2;
+//            result = stringToValue1 - stringToValue2;
+            result = a.subtract(b).doubleValue();
         } else if (v.getId() == R.id.button3) {
-            result = stringToValue1 * stringToValue2;
+//            result = stringToValue1 * stringToValue2;
+            result = a.multiply(b).doubleValue();
         } else if (v.getId() == R.id.button4) {
-            result = stringToValue1 / stringToValue2;
+//            result = stringToValue1 / stringToValue2;
+            result = a.divide(b).doubleValue();
         }
+        System.out.println(stringToValue1);
+        System.out.println(stringToValue2);
         System.out.println(result);
         Intent intent = new Intent(this, Main2Activity.class);
         intent.putExtra("Result", result );

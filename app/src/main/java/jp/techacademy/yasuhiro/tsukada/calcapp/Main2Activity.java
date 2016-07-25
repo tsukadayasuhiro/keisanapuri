@@ -17,7 +17,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         Intent intent = getIntent();
-        double value1 = intent.getDoubleExtra("Result", 0);
+        double value1 = intent.getDoubleExtra("Result", 0.0);
 
         TextView textView = (TextView) findViewById(R.id.textView);
         textView.setText(String.valueOf(value1));
