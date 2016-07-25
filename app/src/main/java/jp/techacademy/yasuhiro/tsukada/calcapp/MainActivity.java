@@ -76,8 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            result = stringToValue1 * stringToValue2;
             result = a.multiply(b).doubleValue();
         } else if (v.getId() == R.id.button4) {
-//            result = stringToValue1 / stringToValue2;
-            result = a.divide(b).doubleValue();
+           result = stringToValue1 / stringToValue2;
         }
         System.out.println(stringToValue1);
         System.out.println(stringToValue2);
